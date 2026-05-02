@@ -17,7 +17,7 @@ import argparse
 import math
 
 def main():
-    path = "lavawolfiee/Mixtral-8x7B-Instruct-v0.1-offloading-demo"
+    path = "/data1/fanya/models/Qwen/Qwen3-VL-30B-A3B-Instruct"
     model_name = path
     quantized_model_name = path
     state_path = path
@@ -30,7 +30,7 @@ def main():
     cache_strategy = get_cache_size(main_size,args.adapgate)
     print(cache_strategy)
 
-    num_experts = config.num_local_experts
+    # num_experts = config.num_local_experts
 
     offload_config = OffloadConfig(
         main_size=main_size,
